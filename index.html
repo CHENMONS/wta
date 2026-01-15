@@ -1,43 +1,896 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>PT Widya Techno Abadi</title>
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Widya Techno Abadi - Leading Construction & EPC Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #0a4d2e;
+            --primary-light: #0f6b3f;
+            --accent: #ff6b35;
+            --dark: #1a1a1a;
+            --light: #f5f7fa;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #0a4d2e 0%, #0f6b3f 100%);
+            --gradient-accent: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+        
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: transparent;
+        }
+        
+        .header.scrolled {
+            background: rgba(10, 77, 46, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 0;
+        }
+        
+        .nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            transition: padding 0.4s ease;
+        }
+        
+        .header.scrolled .nav {
+            padding: 15px 50px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .logo::before {
+            content: '';
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(45deg);
+            position: absolute;
+            left: 0;
+        }
+        
+        .logo-text {
+            margin-left: 55px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50px;
+            z-index: -1;
+        }
+        
+        .nav-menu a:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .nav-menu a:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 80px;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0 C150,80 350,80 600,60 C850,40 1050,40 1200,80 L1200,120 L0,120 Z" fill="%23ffffff"/></svg>');
+            background-size: cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+            letter-spacing: -2px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 span {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 45px;
+            font-weight: 400;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
+        }
+        
+        .btn {
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: var(--white);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(255, 107, 53, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* ===== STATS SECTION ===== */
+        .stats-section {
+            position: relative;
+            margin-top: -80px;
+            padding: 0 20px;
+            z-index: 100;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+        
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background: linear-gradient(to bottom, transparent, var(--primary-light), transparent);
+        }
+        
+        .stat-item:last-child::after {
+            display: none;
+        }
+        
+        .stat-number {
+            font-size: 56px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* ===== SECTION STYLES ===== */
+        .section {
+            padding: 100px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(10, 77, 46, 0.1), rgba(15, 107, 63, 0.1));
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            background: var(--light);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image-main {
+            width: 100%;
+            height: 600px;
+            background: var(--gradient);
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .about-badge-float {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .badge-number {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .badge-text {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .about-content h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        
+        .about-content p {
+            font-size: 17px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .features-list {
+            margin-top: 40px;
+            display: grid;
+            gap: 20px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background: var(--white);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .feature-item:hover {
+            transform: translateX(10px);
+            border-color: var(--primary-light);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .feature-text h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        
+        .feature-text p {
+            font-size: 15px;
+            color: #666;
+            margin: 0;
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 25px;
+            padding: 45px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-light);
+        }
+        
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: rotateY(360deg) scale(1.1);
+            background: var(--gradient-accent);
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 80px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .footer-brand p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-5px);
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+            transform: translateX(5px);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 56px; }
+            .about-grid { grid-template-columns: 1fr; gap: 50px; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .hero h1 { font-size: 42px; }
+            .section-title { font-size: 36px; }
+            .stats-container { padding: 30px; gap: 30px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <span class="logo-text">PT WTA</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header class="header">
-<nav class="nav">
-<a class="logo">PT WTA</a>
-<ul class="nav-menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="certifications.html">Certifications</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i> ASKINDO K1 Certified
+            </div>
+            <h1>PT Widya <span>Techno</span> Abadi</h1>
+            <p class="hero-subtitle">Leading Construction & Boiler Specialist | EPC Services for Palm Oil Mills</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Get Quote
+                </a>
+                <a href="services.html" class="btn btn-secondary">
+                    <i class="fas fa-briefcase"></i> Our Services
+                </a>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-<h1>PT Widya Techno Abadi</h1>
-<p>Construction & Boiler Specialist | EPC Services</p>
-<a href="contact.html" class="btn btn-primary">Get Quote</a>
-</section>
+    <!-- STATS SECTION -->
+    <div class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">40+</div>
+                <div class="stat-label">Expert Employees</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">K1</div>
+                <div class="stat-label">ASKINDO Qualification</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+    </div>
 
-<section class="section container">
-<h2 class="section-title">Company Overview</h2>
-<p class="section-subtitle">
-Leading EPC & Boiler Specialist based in Medan
-</p>
-</section>
+    <!-- ABOUT SECTION -->
+    <section class="about-section section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-main">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="about-badge-float">
+                        <div class="badge-number">15+</div>
+                        <div class="badge-text">Years of Excellence</div>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                        <div class="section-badge">About Us</div>
+                        <h3>Leading EPC & Boiler Specialist in Medan</h3>
+                    </div>
+                    
+                    <p>PT Widya Techno Abadi is a premier construction company based in Medan, specializing in comprehensive EPC (Engineering, Procurement, Construction) services and boiler installation for the palm oil mill industry.</p>
+                    
+                    <p>With over 40 experienced professionals and K1 qualification from ASKINDO, we deliver excellence in every project, ensuring optimal performance and quality standards.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>K1 Certified</h4>
+                                <p>ASKINDO certified with multiple K1 qualifications</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Expert Team</h4>
+                                <p>40+ professionals experienced in their fields</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Quality Assured</h4>
+                                <p>Premium equipment and proven methodologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer class="footer">
-<div class="footer-bottom">© 2025 PT Widya Techno Abadi</div>
-</footer>
+    <!-- SERVICES SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Services</div>
+                <h2 class="section-title">Comprehensive Construction Solutions</h2>
+                <p class="section-subtitle">Professional services tailored to meet your industrial and construction needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Multi Residential Construction</h3>
+                    <p>Expert construction services for multi-unit and mass residential buildings with K1 qualification standards (BG002).</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Warehouse & Industrial</h3>
+                    <p>Specialized construction for warehouse and industrial facilities serving manufacturing sectors (BG003).</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Boiler Installation</h3>
+                    <p>Professional boiler system installation, thermal systems, and geothermal engineering services (MK007).</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Building Insulation</h3>
+                    <p>High-quality insulation construction services for optimal building thermal management (MK004).</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>EPC Services</h3>
+                    <p>Complete Engineering, Procurement, and Construction services specialized for palm oil mills.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Operational Procurement</h3>
+                    <p>Professional procurement construction services to enhance operational performance and quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><i class="fas fa-building"></i> PT Widya Techno Abadi
