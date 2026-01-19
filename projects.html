@@ -1,162 +1,194 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Projects | PT Widya Techno Abadi</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengalaman Proyek | PT Widya Techno Abadi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        .project-overlay {
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+        }
+        .bg-industrial {
+            background-color: #0f172a;
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f97316' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
 
-<!-- HEADER -->
-<header class="header">
-  <nav class="nav">
-    <a class="logo">PT WTA</a>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-black tracking-tighter text-slate-900 border-l-4 border-orange-600 pl-3 uppercase italic">PT WTA</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-orange-600 transition">Beranda</a>
+                <a href="about.html" class="hover:text-orange-600 transition">Tentang</a>
+                <a href="services.html" class="hover:text-orange-600 transition">Layanan</a>
+                <a href="projects.html" class="text-orange-600 underline underline-offset-8">Proyek</a>
+                <a href="contact.html" class="hover:text-orange-600 transition">Kontak</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Project Experience</h1>
-  <p>
-    Industrial & Boiler Engineering Projects
-  </p>
-</section>
+    <section class="pt-48 pb-24 bg-industrial text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center md:text-left">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 italic tracking-tighter uppercase">Track <span class="text-orange-500">Records</span></h1>
+            <p class="text-slate-400 text-lg max-w-2xl leading-relaxed italic border-l-2 border-orange-600 pl-6">
+                Eksplorasi jejak proyek PT Widya Techno Abadi dalam mentransformasi fasilitas industri melalui engineering yang presisi.
+            </p>
+        </div>
+    </section>
 
-<!-- INTRO -->
-<section class="section container">
-  <h2 class="section-title">Our Experience</h2>
-  <p class="section-subtitle">
-    Pengalaman Proyek Konstruksi & Engineering
-  </p>
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="project-card group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=800&q=80" alt="Boiler Project" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Boiler System</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3 italic uppercase leading-tight">Palm Oil Mill – Boiler Upgrade</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-grow leading-relaxed">Instalasi sistem boiler baru dan retubing pipa tekanan tinggi pada pabrik kelapa sawit di wilayah Sumatera.</p>
+                        <div class="pt-6 border-t border-slate-50">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Scope of Work</span>
+                            <span class="text-sm font-bold text-slate-700 italic">Boiler Installation & Retubing</span>
+                        </div>
+                    </div>
+                </div>
 
-  <p style="max-width:900px;margin:auto;text-align:center">
-    PT Widya Techno Abadi telah menangani berbagai
-    proyek konstruksi industri dan boiler engineering
-    dengan pendekatan profesional, aman, dan tepat waktu.
-  </p>
-</section>
+                <div class="project-card group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Warehouse Project" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Construction</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3 italic uppercase leading-tight">Industrial Logistic Warehouse</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-grow leading-relaxed">Pembangunan struktur gudang industri skala besar menggunakan kerangka baja mutu tinggi dan atap insulasi.</p>
+                        <div class="pt-6 border-t border-slate-50">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Scope of Work</span>
+                            <span class="text-sm font-bold text-slate-700 italic">Industrial Construction</span>
+                        </div>
+                    </div>
+                </div>
 
-<!-- PROJECT LIST -->
-<section class="section light">
-  <div class="container grid-3">
+                <div class="project-card group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=800&q=80" alt="Thermal Project" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Thermal</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3 italic uppercase leading-tight">Furnace & Chimney Installation</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-grow leading-relaxed">Fabrikasi dan pemasangan sistem cerobong emisi dan furnace untuk efisiensi pembakaran material industri.</p>
+                        <div class="pt-6 border-t border-slate-50">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Scope of Work</span>
+                            <span class="text-sm font-bold text-slate-700 italic">Thermal & Mechanical Works</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="card">
-      <h3>Palm Oil Mill – Boiler System</h3>
-      <p>
-        Instalasi dan perbaikan sistem boiler
-        pada pabrik kelapa sawit untuk
-        mendukung proses produksi.
-      </p>
-      <p><strong>Scope:</strong> Boiler Installation & Retubing</p>
-    </div>
+                <div class="project-card group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Mechanical Project" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Environmental</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3 italic uppercase leading-tight">Dust Collector System</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-grow leading-relaxed">Integrasi sistem penyaring debu industri untuk memenuhi ambang batas kebersihan udara lingkungan kerja.</p>
+                        <div class="pt-6 border-t border-slate-50">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Scope of Work</span>
+                            <span class="text-sm font-bold text-slate-700 italic">Mechanical Installation</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="card">
-      <h3>Industrial Warehouse</h3>
-      <p>
-        Pembangunan warehouse industri
-        lengkap dengan struktur baja
-        dan sistem insulasi.
-      </p>
-      <p><strong>Scope:</strong> Industrial Construction</p>
-    </div>
+                <div class="project-card group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1535813543269-7328cf139544?auto=format&fit=crop&w=800&q=80" alt="Insulation Project" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Piping</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3 italic uppercase leading-tight">Industrial Mechanical & Piping</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-grow leading-relaxed">Pekerjaan mekanikal berat dan instalasi perpipaan industri lengkap dengan sistem insulasi panas.</p>
+                        <div class="pt-6 border-t border-slate-50">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Scope of Work</span>
+                            <span class="text-sm font-bold text-slate-700 italic">Mechanical & Insulation</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="card">
-      <h3>Furnace & Chimney System</h3>
-      <p>
-        Instalasi furnace dan cerobong
-        untuk kebutuhan proses industri
-        dan pengendalian emisi.
-      </p>
-      <p><strong>Scope:</strong> Thermal & Mechanical Works</p>
-    </div>
+                <div class="project-card group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full">
+                    <div class="h-64 bg-slate-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615ad?auto=format&fit=crop&w=800&q=80" alt="EPC Project" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Full Service</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3 italic uppercase leading-tight">EPC Integrated Facility</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-grow leading-relaxed">Manajemen proyek EPC menyeluruh mulai dari desain engineering hingga commissioning fasilitas produksi.</p>
+                        <div class="pt-6 border-t border-slate-50">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Scope of Work</span>
+                            <span class="text-sm font-bold text-slate-700 italic">EPC Services</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="card">
-      <h3>Dust Collector System</h3>
-      <p>
-        Pemasangan sistem dust collector
-        untuk meningkatkan kualitas lingkungan kerja.
-      </p>
-      <p><strong>Scope:</strong> Mechanical Installation</p>
-    </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>Industrial Mechanical Works</h3>
-      <p>
-        Pekerjaan mekanikal dan piping
-        untuk fasilitas produksi industri.
-      </p>
-      <p><strong>Scope:</strong> Mechanical & Insulation</p>
-    </div>
+    <section class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <div class="text-5xl font-black text-orange-500 mb-2 italic">100%</div>
+                    <div class="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">On-Time Delivery</div>
+                </div>
+                <div class="border-y md:border-y-0 md:border-x border-slate-800 py-8 md:py-0">
+                    <div class="text-5xl font-black text-orange-500 mb-2 italic">Quality</div>
+                    <div class="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Industry Standard Assurance</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-black text-orange-500 mb-2 italic">Zero</div>
+                    <div class="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Accident Commitment</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>EPC Industrial Project</h3>
-      <p>
-        Proyek EPC terintegrasi mulai
-        dari engineering hingga commissioning.
-      </p>
-      <p><strong>Scope:</strong> EPC Services</p>
-    </div>
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-orange-600 p-12 md:p-16 rounded-[3rem] text-center text-white shadow-2xl shadow-orange-100 relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-black mb-6 italic uppercase tracking-tighter italic">Punya Rencana Proyek?</h2>
+                    <p class="text-orange-100 mb-10 text-lg max-w-2xl mx-auto">Diskusikan kebutuhan teknis Anda dengan tim profesional kami sekarang.</p>
+                    <a href="contact.html" class="inline-block bg-slate-900 text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:text-orange-600 transition-all duration-300">
+                        Hubungi Tim Kami <i class="fas fa-paper-plane ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>
-</section>
-
-<!-- CLIENT VALUE -->
-<section class="section container">
-  <h2 class="section-title">Our Commitment</h2>
-
-  <div class="grid-3">
-    <div class="card">
-      <h3>On-Time Delivery</h3>
-      <p>
-        Penyelesaian proyek sesuai
-        jadwal yang disepakati.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Quality Assurance</h3>
-      <p>
-        Kualitas pekerjaan sesuai
-        standar industri.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Safety First</h3>
-      <p>
-        Keselamatan kerja sebagai
-        prioritas utama.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section container">
-  <div class="card" style="text-align:center">
-    <h2>Have a Project in Mind?</h2>
-    <p>
-      Hubungi kami untuk diskusi
-      dan perencanaan proyek Anda.
-    </p>
-    <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-bottom">
-    © 2025 PT Widya Techno Abadi. All Rights Reserved.
-  </div>
-</footer>
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-2xl font-black text-slate-900 italic tracking-tighter mb-4 uppercase">PT Widya Techno Abadi</div>
+            <p class="text-slate-400 text-[10px] font-black tracking-[0.4em] uppercase">© 2026 PT Widya Techno Abadi. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
