@@ -1,33 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Certifications - PT WTA</title>
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikasi & Kualifikasi | PT Widya Techno Abadi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .pattern-bg {
+            background-color: #0f172a;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .cert-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left-width: 4px;
+            border-left-color: transparent;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-left-color: #f97316;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50">
 
-<header class="header">
-<nav class="nav">
-<a class="logo">PT WTA</a>
-<ul class="nav-menu">
-<li><a href="index.html">Home</a></li>
-</ul>
-</nav>
-</header>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-tighter text-slate-900 border-l-4 border-orange-600 pl-3">PT WTA</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest">
+                <a href="index.html" class="text-slate-500 hover:text-orange-600 transition">Beranda</a>
+                <a href="about.html" class="text-slate-500 hover:text-orange-600 transition">Tentang Kami</a>
+                <a href="certifications.html" class="text-orange-600">Sertifikasi</a>
+                <a href="contact.html" class="text-slate-500 hover:text-orange-600 transition">Kontak</a>
+            </div>
+        </div>
+    </nav>
 
-<section class="hero">
-<h1>Certifications</h1>
-<p>K1 ASKINDO Qualification</p>
-</section>
+    <section class="pattern-bg pt-44 pb-28 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center space-x-2 bg-orange-600/20 text-orange-500 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                <i class="fas fa-shield-check"></i>
+                <span>Certified Contractor</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Kualifikasi & Lisensi</h1>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed italic">
+                PT Widya Techno Abadi memegang sertifikasi Kualifikasi K1 ASKINDO, menjamin standar pengerjaan konstruksi dan mekanikal yang diakui secara nasional.
+            </p>
+        </div>
+    </section>
 
-<section class="section container grid-3">
-<div class="card">BG002 – Residential</div>
-<div class="card">BG003 – Warehouse</div>
-<div class="card">MK004 – Insulation</div>
-<div class="card">MK007 – Thermal & Gas</div>
-</section>
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="mb-16 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <h2 class="text-3xl font-black text-slate-900 mb-2 italic uppercase">Daftar Klasifikasi (SBU)</h2>
+                    <p class="text-slate-500 font-medium">Sertifikat Badan Usaha yang Terdaftar</p>
+                </div>
+                <div class="bg-white px-6 py-4 rounded-xl border border-slate-200 flex items-center shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Logo_ASKINDO.png" alt="Logo Askindo" class="h-10 opacity-80 grayscale hover:grayscale-0 transition duration-500">
+                    <div class="ml-4 border-l pl-4 border-slate-200">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-tighter">Anggota Resmi</p>
+                        <p class="text-sm font-bold text-slate-700 uppercase">ASKINDO K1</p>
+                    </div>
+                </div>
+            </div>
 
-<footer class="footer"><div class="footer-bottom">© 2025 PT WTA</div></footer>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="cert-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-orange-600 font-black text-2xl mb-4 italic">BG002</div>
+                    <h4 class="text-lg font-extrabold text-slate-900 mb-2 uppercase">Residential</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Konstruksi gedung hunian, termasuk bangunan tempat tinggal dan fasilitas penunjang lainnya.</p>
+                    <div class="pt-4 border-t border-slate-50 text-[10px] font-black text-slate-400 uppercase tracking-widest">General Construction</div>
+                </div>
+
+                <div class="cert-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-orange-600 font-black text-2xl mb-4 italic">BG003</div>
+                    <h4 class="text-lg font-extrabold text-slate-900 mb-2 uppercase">Warehouse</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Konstruksi gedung gudang dan industri, spesialisasi dalam ruang penyimpanan skala besar.</p>
+                    <div class="pt-4 border-t border-slate-50 text-[10px] font-black text-slate-400 uppercase tracking-widest">Industrial Building</div>
+                </div>
+
+                <div class="cert-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-orange-600 font-black text-2xl mb-4 italic">MK004</div>
+                    <h4 class="text-lg font-extrabold text-slate-900 mb-2 uppercase">Insulation</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Pekerjaan isolasi termal, suara, dan getaran untuk pipa boiler serta tangki industri.</p>
+                    <div class="pt-4 border-t border-slate-50 text-[10px] font-black text-slate-400 uppercase tracking-widest">Mechanical Services</div>
+                </div>
+
+                <div class="cert-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-orange-600 font-black text-2xl mb-4 italic">MK007</div>
+                    <h4 class="text-lg font-extrabold text-slate-900 mb-2 uppercase">Thermal & Gas</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Konstruksi instalasi alat angkut, perpipaan gas, dan sistem termal energi/boiler.</p>
+                    <div class="pt-4 border-t border-slate-50 text-[10px] font-black text-slate-400 uppercase tracking-widest">Energy Specialist</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between shadow-2xl overflow-hidden relative">
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold text-white mb-2 italic uppercase tracking-tighter italic">Kepatuhan Standar Nasional</h3>
+                    <p class="text-slate-400 text-sm max-w-lg">Seluruh pengerjaan kami mengacu pada standar keamanan kerja dan regulasi teknis yang berlaku di Indonesia.</p>
+                </div>
+                <div class="mt-8 md:mt-0 flex space-x-6 relative z-10">
+                    <div class="text-center">
+                        <div class="text-orange-500 text-2xl font-black">K1</div>
+                        <div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Kualifikasi</div>
+                    </div>
+                    <div class="h-10 w-[1px] bg-slate-800"></div>
+                    <div class="text-center">
+                        <div class="text-white text-2xl font-black italic">LPJK</div>
+                        <div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Standard</div>
+                    </div>
+                </div>
+                <i class="fas fa-file-invoice absolute right-[-20px] top-[-20px] text-[150px] text-white/5 -rotate-12"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="font-black text-slate-900 italic uppercase mb-4 tracking-tighter">PT Widya Techno Abadi</div>
+            <p class="text-slate-400 text-xs font-bold tracking-widest uppercase">© 2026 PT WTA. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
