@@ -3,280 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PT Widya Techno Abadi - Leading Construction & Boiler Specialist in Medan, Indonesia. EPC Services for Palm Oil Mills.">
-    <meta name="keywords" content="PT Widya Techno Abadi, WTA, Construction Medan, Boiler Installation, EPC Services">
-    <title>PT Widya Techno Abadi - Construction & Boiler Specialist</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- HEADER -->
-    <header class="header" id="header">
-        <nav class="nav container-wide">
-            <a href="index.html" class="logo">
-                <span class="logo-text">PT WTA</span>
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
+    <title>WTA Studio | Excellence in Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-award"></i> ASKINDO K1 Certified
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #3b82f622, transparent),
+                        radial-gradient(circle at bottom left, #8b5cf622, transparent);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter text-blue-600">WTA<span class="text-slate-900">STUDIO.</span></div>
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#home" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
+                <a href="#services" class="hover:text-blue-600 transition">Layanan</a>
+                <a href="#portfolio" class="hover:text-blue-600 transition">Portofolio</a>
             </div>
-            <h1>PT Widya <span>Techno</span> Abadi</h1>
-            <p class="hero-subtitle">Leading Construction & Boiler Specialist | EPC Services for Palm Oil Mills</p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> Get Quote
-                </a>
-                <a href="services.html" class="btn btn-secondary">
-                    <i class="fas fa-briefcase"></i> Our Services
-                </a>
+            <a href="#contact" class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-600 transition shadow-lg">Mulai Proyek</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full">Innovation First</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">Membangun Masa Depan <span class="text-blue-600">Digital</span> Anda.</h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-lg">WTA menghadirkan solusi desain dan pengembangan kelas dunia untuk brand yang ingin bertransformasi di era teknologi modern.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center">
+                            Lihat Karya Kami <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </button>
+                        <button class="border border-slate-200 bg-white px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">Konsultasi Gratis</button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -z-10 top-0 -right-20 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dashboard Preview" class="rounded-3xl shadow-2xl border-8 border-white">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- STATS SECTION -->
-    <div class="stats-section">
-        <div class="stats-container">
-            <div class="stat-item">
-                <div class="stat-number">40+</div>
-                <div class="stat-label">Expert Employees</div>
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div>
+                <div class="text-4xl font-extrabold text-blue-400 mb-2">150+</div>
+                <div class="text-slate-400 text-sm font-semibold uppercase tracking-wider">Proyek Selesai</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">Projects Completed</div>
+            <div>
+                <div class="text-4xl font-extrabold text-blue-400 mb-2">98%</div>
+                <div class="text-slate-400 text-sm font-semibold uppercase tracking-wider">Kepuasan Klien</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">K1</div>
-                <div class="stat-label">ASKINDO Qualification</div>
+            <div>
+                <div class="text-4xl font-extrabold text-blue-400 mb-2">12+</div>
+                <div class="text-slate-400 text-sm font-semibold uppercase tracking-wider">Negara Terjangkau</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">15+</div>
-                <div class="stat-label">Years Experience</div>
+            <div>
+                <div class="text-4xl font-extrabold text-blue-400 mb-2">50+</div>
+                <div class="text-slate-400 text-sm font-semibold uppercase tracking-wider">Ahli Profesional</div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- ABOUT PREVIEW SECTION -->
-    <section class="section-lg" style="background: #f5f7fa;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">About Us</div>
-                <h2 class="section-title">Leading EPC & Boiler Specialist</h2>
-                <p class="section-subtitle">Committed to excellence in construction and engineering services for industrial sectors across Indonesia</p>
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-extrabold mb-4">Layanan Spesialis Kami</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Kami mengintegrasikan strategi, desain, dan teknologi untuk menciptakan pengalaman luar biasa.</p>
             </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 60px;">
-                <div>
-                    <h3 style="font-size: 32px; font-weight: 700; margin-bottom: 25px; color: var(--dark);">Your Trusted Construction Partner in Medan</h3>
-                    <p style="color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 17px;">
-                        <strong style="color: var(--primary);">PT Widya Techno Abadi</strong> is a premier construction company based in Medan, specializing in comprehensive EPC (Engineering, Procurement, Construction) services and boiler installation for the palm oil mill industry.
-                    </p>
-                    <p style="color: #666; line-height: 1.8; margin-bottom: 30px; font-size: 17px;">
-                        With over 40 experienced professionals and K1 qualification from ASKINDO, we deliver excellence in every project, ensuring optimal performance and quality standards.
-                    </p>
-                    <a href="about.html" class="btn btn-outline">
-                        <i class="fas fa-arrow-right"></i> Learn More About Us
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-10 border border-slate-100 rounded-3xl bg-slate-50 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200">
+                        <i class="fas fa-paint-brush text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Antarmuka yang memukau dan pengalaman pengguna yang intuitif untuk semua platform.</p>
+                    <a href="#" class="text-blue-600 font-bold inline-flex items-center group">
+                        Detail <i class="fas fa-chevron-right ml-2 text-xs group-hover:translate-x-1 transition"></i>
                     </a>
                 </div>
-                
-                <div style="display: grid; gap: 20px;">
-                    <div class="card">
-                        <div style="display: flex; gap: 20px; align-items: start;">
-                            <div style="width: 60px; height: 60px; background: var(--gradient-primary); color: white; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--dark);">K1 Certified</h4>
-                                <p style="color: #666; font-size: 15px; margin: 0;">ASKINDO certified with multiple K1 qualifications for construction excellence</p>
-                            </div>
-                        </div>
+
+                <div class="p-10 border border-slate-100 rounded-3xl bg-slate-50 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-200">
+                        <i class="fas fa-code text-white text-xl"></i>
                     </div>
-                    
-                    <div class="card">
-                        <div style="display: flex; gap: 20px; align-items: start;">
-                            <div style="width: 60px; height: 60px; background: var(--gradient-primary); color: white; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">
-                                <i class="fas fa-users-cog"></i>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--dark);">Expert Team</h4>
-                                <p style="color: #666; font-size: 15px; margin: 0;">40+ professionals with extensive experience in their specialized fields</p>
-                            </div>
-                        </div>
+                    <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Pengembangan website performa tinggi menggunakan stack teknologi terbaru.</p>
+                    <a href="#" class="text-purple-600 font-bold inline-flex items-center group">
+                        Detail <i class="fas fa-chevron-right ml-2 text-xs group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+
+                <div class="p-10 border border-slate-100 rounded-3xl bg-slate-50 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-200">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
                     </div>
-                    
-                    <div class="card">
-                        <div style="display: flex; gap: 20px; align-items: start;">
-                            <div style="width: 60px; height: 60px; background: var(--gradient-primary); color: white; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">
-                                <i class="fas fa-check-double"></i>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--dark);">Quality Assured</h4>
-                                <p style="color: #666; font-size: 15px; margin: 0;">Premium equipment and proven methodologies for optimal results</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Digital Strategy</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Strategi berbasis data untuk meningkatkan visibilitas dan konversi bisnis Anda.</p>
+                    <a href="#" class="text-emerald-600 font-bold inline-flex items-center group">
+                        Detail <i class="fas fa-chevron-right ml-2 text-xs group-hover:translate-x-1 transition"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section class="section-lg">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Our Services</div>
-                <h2 class="section-title">Comprehensive Construction Solutions</h2>
-                <p class="section-subtitle">Professional services tailored to meet your industrial and construction needs</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
+    <footer class="bg-slate-50 border-t border-slate-200 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="text-3xl font-extrabold text-blue-600 mb-6">WTA<span class="text-slate-900 uppercase">Studio</span></div>
+                    <p class="text-slate-500 max-w-sm text-lg">Partner transformasi digital terbaik untuk mewujudkan ide visioner Anda menjadi realitas yang fungsional.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-slate-900">Hubungi Kami</h4>
+                    <ul class="space-y-4 text-slate-500">
+                        <li>hello@wtastudio.com</li>
+                        <li>+62 812 3456 7890</li>
+                        <li>Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-slate-900">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition shadow-sm"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition shadow-sm"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition shadow-sm"><i class="fab fa-twitter"></i></a>
                     </div>
-                    <h3>Multi Residential Construction</h3>
-                    <p>Expert construction services for multi-unit and mass residential buildings with K1 qualification standards (BG002).</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Warehouse & Industrial</h3>
-                    <p>Specialized construction for warehouse and industrial facilities serving manufacturing sectors (BG003).</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <h3>Boiler Installation</h3>
-                    <p>Professional boiler system installation, thermal systems, and geothermal engineering services (MK007).</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Building Insulation</h3>
-                    <p>High-quality insulation construction services for optimal building thermal management (MK004).</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>EPC Services</h3>
-                    <p>Complete Engineering, Procurement, and Construction services specialized for palm oil mills.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Operational Procurement</h3>
-                    <p>Professional procurement construction services to enhance operational performance and quality.</p>
                 </div>
             </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="services.html" class="btn btn-primary">
-                    <i class="fas fa-th"></i> View All Services
-                </a>
+            <div class="pt-8 border-t border-slate-200 text-center text-slate-400 text-sm">
+                &copy; 2024 WTA Studio. Hak Cipta Dilindungi.
             </div>
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="section-lg" style="background: var(--gradient-primary); color: white; text-align: center;">
-        <div class="container">
-            <div class="section-badge" style="background: rgba(255,255,255,0.15); color: white; border: 2px solid rgba(255,255,255,0.2);">
-                <i class="fas fa-phone-alt"></i> Get Started
-            </div>
-            <h2 style="font-size: 48px; font-weight: 800; margin: 25px 0; color: white;">Ready to Start Your Project?</h2>
-            <p style="font-size: 20px; opacity: 0.9; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                Let's discuss your construction needs. Our expert team is ready to provide comprehensive solutions for your industrial projects.
-            </p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> Request a Quote
-                </a>
-                <a href="tel:061-7883048" class="btn btn-secondary">
-                    <i class="fas fa-phone"></i> Call Us Now
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3><i class="fas fa-building"></i> PT Widya Techno Abadi</h3>
-                <p>Leading Construction & Boiler Specialist Company in Medan, Indonesia. Providing EPC services for Palm Oil Mills and industrial construction solutions.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Services</h4>
-                <div class="footer-links">
-                    <a href="services.html#epc">EPC Services</a>
-                    <a href="services.html#boiler">Boiler Installation</a>
-                    <a href="services.html#construction">Construction</a>
-                    <a href="services.html#insulation">Insulation</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <div class="footer-links">
-                    <a href="tel:061-7883048"><i class="fas fa-phone"></i> 061-7883048</a>
-                    <a href="mailto:info@widyatechno.com"><i class="fas fa-envelope"></i> info@widyatechno.com</a>
-                    <a href="contact.html"><i class="fas fa-paper-plane"></i> Get Quote</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 PT Widya Techno Abadi. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
