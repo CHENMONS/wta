@@ -1,30 +1,150 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>ISO | PT Widya Techno Abadi</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikasi ISO & Compliance | PT Widya Techno Abadi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .iso-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                        url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .compliance-card {
+            transition: all 0.3s ease;
+            border-top: 5px solid #f97316;
+        }
+
+        .compliance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge-status {
+            background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
 
-<header class="navbar">
-  <div class="container">
-    <div class="logo">PT WTA</div>
-  </div>
-</header>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-black tracking-tighter text-slate-900 border-l-4 border-orange-600 pl-3 uppercase italic">PT WTA</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-orange-600 transition">Beranda</a>
+                <a href="about.html" class="hover:text-orange-600 transition">Tentang</a>
+                <a href="services.html" class="hover:text-orange-600 transition">Layanan</a>
+                <a href="iso.html" class="text-orange-600 underline underline-offset-8">Compliance</a>
+                <a href="contact.html" class="hover:text-orange-600 transition">Kontak</a>
+            </div>
+        </div>
+    </nav>
 
-<section class="section container">
-  <h2>Certification & Compliance</h2>
-  <ul>
-    <li>SMK3 – Occupational Safety</li>
-    <li>ISO 9001 – Quality Management (Ready)</li>
-    <li>ISO 45001 – HSE System</li>
-  </ul>
-</section>
+    <section class="iso-hero pt-48 pb-32 text-white relative">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 italic tracking-tight">Kualitas, Kesehatan <br>& <span class="text-orange-500 underline">Keselamatan Kerja</span></h1>
+            <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed italic">
+                PT Widya Techno Abadi berkomitmen penuh pada standar internasional dalam setiap prosedur operasional untuk menjamin hasil proyek yang presisi dan aman.
+            </p>
+        </div>
+    </section>
 
-<footer>
-  <p>© 2026 PT Widya Techno Abadi</p>
-</footer>
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="compliance-card bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
+                    <div class="text-orange-600 text-4xl mb-6">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 uppercase italic tracking-tighter text-slate-900">SMK3</h3>
+                    <p class="text-xs font-bold text-slate-400 mb-6 tracking-[0.2em] uppercase">Sistem Manajemen K3</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                        Penerapan Sistem Manajemen Keselamatan dan Kesehatan Kerja sesuai regulasi nasional untuk menciptakan lingkungan kerja yang nihil kecelakaan (Zero Accident).
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-xs font-bold text-slate-700">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i> Safety Induction Program
+                        </li>
+                        <li class="flex items-center text-xs font-bold text-slate-700">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i> PPE Standard Compliance
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="compliance-card bg-white p-10 rounded-3xl shadow-sm border border-slate-100 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 badge-status text-[10px] text-white font-black px-3 py-1 rounded-full uppercase tracking-tighter">Ready</div>
+                    <div class="text-orange-600 text-4xl mb-6">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 uppercase italic tracking-tighter text-slate-900">ISO 9001:2015</h3>
+                    <p class="text-xs font-bold text-slate-400 mb-6 tracking-[0.2em] uppercase">Quality Management System</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                        Standar manajemen mutu yang menjamin produk dan layanan konstruksi boiler kami selalu memenuhi persyaratan pelanggan dan regulasi industri.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-xs font-bold text-slate-700">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i> Quality Control Rigor
+                        </li>
+                        <li class="flex items-center text-xs font-bold text-slate-700">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i> Continuous Improvement
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="compliance-card bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
+                    <div class="text-orange-600 text-4xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 uppercase italic tracking-tighter text-slate-900">ISO 45001</h3>
+                    <p class="text-xs font-bold text-slate-400 mb-6 tracking-[0.2em] uppercase">HSE Management System</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                        Komitmen internasional terhadap kesehatan dan keselamatan kerja untuk mengurangi risiko di lokasi konstruksi dan pabrik secara proaktif.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-xs font-bold text-slate-700">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i> Risk Assessment (HIRADC)
+                        </li>
+                        <li class="flex items-center text-xs font-bold text-slate-700">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i> Occupational Health Focus
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-10 italic uppercase tracking-widest text-orange-500 underline underline-offset-8 decoration-white">Kebijakan K3L & Mutu</h2>
+            <div class="bg-white/5 p-12 rounded-[3rem] border border-white/10 backdrop-blur-sm">
+                <p class="text-xl md:text-2xl leading-relaxed italic text-slate-300">
+                    "Kami bertekad menjadi mitra konstruksi terbaik dengan memprioritaskan keselamatan jiwa di atas segalanya, menjaga kualitas tanpa kompromi, dan melindungi lingkungan kerja demi keberlanjutan industri di Indonesia."
+                </p>
+                <div class="mt-10 pt-8 border-t border-white/10 flex flex-col items-center">
+                    <p class="font-black text-white uppercase tracking-widest italic">Manajemen PT Widya Techno Abadi</p>
+                    <p class="text-xs text-orange-500 font-bold mt-2 uppercase tracking-[0.3em]">Commitment to Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-2xl font-black text-slate-900 italic tracking-tighter mb-4 uppercase">PT Widya Techno Abadi</div>
+            <p class="text-slate-400 text-[10px] font-black tracking-[0.4em] uppercase">© 2026 PT Widya Techno Abadi. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
