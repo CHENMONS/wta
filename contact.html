@@ -1,34 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Contact - PT WTA</title>
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak | PT Widya Techno Abadi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .contact-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .map-container {
+            filter: grayscale(1) invert(0.9) contrast(1.2);
+            transition: all 0.5s ease;
+        }
+        .map-container:hover {
+            filter: grayscale(0) invert(0) contrast(1);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50">
 
-<header class="header">
-<nav class="nav">
-<a class="logo">PT WTA</a>
-<ul class="nav-menu">
-<li><a href="index.html">Home</a></li>
-</ul>
-</nav>
-</header>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-tighter text-slate-900 border-l-4 border-orange-600 pl-3 uppercase">PT WTA</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-orange-600 transition">Beranda</a>
+                <a href="about.html" class="hover:text-orange-600 transition">Tentang</a>
+                <a href="certifications.html" class="hover:text-orange-600 transition">Sertifikasi</a>
+                <a href="contact.html" class="text-orange-600">Kontak</a>
+            </div>
+        </div>
+    </nav>
 
-<section class="hero">
-<h1>Contact Us</h1>
-<p>Get Quote & Consultation</p>
-</section>
+    <section class="contact-gradient pt-44 pb-24 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-orange-600/10 skew-x-12 transform translate-x-20"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center md:text-left">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 italic">Hubungi Kami</h1>
+            <p class="text-slate-400 text-lg max-w-xl font-medium">Konsultasikan kebutuhan Boiler dan Konstruksi Industri Anda bersama tenaga ahli kami.</p>
+        </div>
+    </section>
 
-<section class="section container">
-<p>
-📍 Medan, Sumatera Utara<br>
-📞 061-7883048<br>
-✉️ info@widyatechno.com
-</p>
-</section>
+    <section class="py-20 -mt-10 relative z-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex items-start space-x-6">
+                        <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 shrink-0">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-slate-900 uppercase tracking-tighter mb-2">Kantor Pusat</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Medan, Sumatera Utara<br>
+                                Indonesia
+                            </p>
+                        </div>
+                    </div>
 
-<footer class="footer"><div class="footer-bottom">© 2025 PT WTA</div></footer>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex items-start space-x-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 shrink-0">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-slate-900 uppercase tracking-tighter mb-2">Telepon Kantor</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">061-7883048</p>
+                            <p class="text-slate-400 text-xs mt-1">Senin - Jumat (08:00 - 17:00)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex items-start space-x-6">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 shrink-0">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-slate-900 uppercase tracking-tighter mb-2">Email</h4>
+                            <p class="text-slate-500 text-sm font-bold">info@widyatechno.com</p>
+                            <p class="text-slate-400 text-xs mt-1">Respon dalam 24 jam kerja</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-[2rem] p-10 md:p-14 shadow-2xl shadow-slate-200 border border-slate-100">
+                        <h3 class="text-3xl font-extrabold text-slate-900 mb-8 italic">Kirim Pesan Konsultasi</h3>
+                        <form action="#" class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-black uppercase text-slate-400 tracking-widest ml-1">Nama Lengkap</label>
+                                <input type="text" placeholder="Masukkan nama..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 transition font-medium">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-black uppercase text-slate-400 tracking-widest ml-1">Nama Perusahaan</label>
+                                <input type="text" placeholder="PT Contoh Industri..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 transition font-medium">
+                            </div>
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="text-xs font-black uppercase text-slate-400 tracking-widest ml-1">Subjek Layanan</label>
+                                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 transition font-medium appearance-none">
+                                    <option>Instalasi Boiler</option>
+                                    <option>Maintenance & Repair</option>
+                                    <option>Konstruksi Warehouse</option>
+                                    <option>EPC Services</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="text-xs font-black uppercase text-slate-400 tracking-widest ml-1">Pesan Detail</label>
+                                <textarea rows="4" placeholder="Jelaskan kebutuhan proyek Anda..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 transition font-medium"></textarea>
+                            </div>
+                            <div class="md:col-span-2 pt-4">
+                                <button class="w-full bg-orange-600 hover:bg-slate-900 text-white font-black py-5 rounded-2xl shadow-xl shadow-orange-200 transition duration-300 uppercase tracking-[0.2em]">
+                                    Kirim Sekarang <i class="fas fa-paper-plane ml-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white h-[450px] map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127441.2260680644!2d98.60367735345717!3d3.58524204561726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131cc1c3ef9fd%3A0x23d2d34211a107c!2sMedan%2C%20Kota%20Medan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-2xl font-black text-slate-900 italic tracking-tighter mb-4 uppercase">PT Widya Techno Abadi</div>
+            <p class="text-slate-400 text-xs font-bold tracking-[0.3em] uppercase">© 2026 PT WTA. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
