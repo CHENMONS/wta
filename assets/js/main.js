@@ -331,12 +331,28 @@ if (currentYearElements.length > 0) {
     });
 }
 
-// Mengatur fungsi buka-tutup menu mobile
 document.addEventListener('DOMContentLoaded', function() {
     const btn = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
 
     btn.addEventListener('click', () => {
+        // Toggle menu visibility
         menu.classList.toggle('hidden');
+        
+        // Ganti ikon bars menjadi 'X' saat terbuka
+        if (menu.classList.contains('hidden')) {
+            icon.classList.replace('fa-times', 'fa-bars');
+        } else {
+            icon.classList.replace('fa-bars', 'fa-times');
+        }
+    });
+
+    // Menutup menu jika user meng-klik di luar menu
+    window.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+            icon.classList.replace('fa-times', 'fa-bars');
+        }
     });
 });
