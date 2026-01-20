@@ -330,3 +330,13 @@ if (currentYearElements.length > 0) {
         el.textContent = currentYear;
     });
 }
+
+// Mengatur fungsi buka-tutup menu mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+});
